@@ -22,6 +22,12 @@
 #define strcpy_P(dest, src) strcpy((dest), (src))
 #endif
 #endif
+#ifdef ESP32
+#ifndef strcpy_P
+#define strcpy_P(dest, src) strcpy((dest), (src))
+#endif
+#endif
+
 #endif
 #include <string.h> // for strcpy_P or strcpy
 #include "TimeLib.h"
